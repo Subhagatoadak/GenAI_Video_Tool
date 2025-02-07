@@ -62,6 +62,13 @@ streamlit run app.py
 - **MoviePy** - For video processing
 - **Matplotlib** - For speaker timeline visualization
 
+## 📝 TODO List
+1. **Add VectorDB** to enable semantic search on transcriptions and speaker data.
+2. **Break the video into smaller clips** for easier analysis and processing.
+3. **Create a highlight video** that summarizes key moments in the uploaded video.
+4. **Tone and person face features** that allows to add context.
+
+
 ## 🤝 Contributing
 1. Fork the repo
 2. Create a feature branch (`git checkout -b feature-name`)
@@ -75,5 +82,4 @@ This project is licensed under the MIT License.
 ---
 
 📩 **For issues or suggestions, create an issue in the repository.**
-
 
