@@ -1,1 +1,2 @@
-# GenAI_Video_Tool
+# video-analytics-GenAI
+GenAI video analytics tool 
