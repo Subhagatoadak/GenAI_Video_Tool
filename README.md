@@ -1,4 +1,4 @@
-# 🎥 Streamlit Video Analytics & Transcription Tool
+# 🎥 Streamlit Video Analytics & Editing Tool
 
 ## 📌 Overview
 This Streamlit application enables users to upload a video file and extract various insights, including:
@@ -6,15 +6,18 @@ This Streamlit application enables users to upload a video file and extract vari
 - **Audio Extraction & Transcription**: Uses Whisper AI to transcribe speech
 - **Speaker Diarization**: Identifies different speakers using Pyannote
 - **Speaker Segmentation**: Matches transcribed text with identified speakers
-- **Visual Representation**: Displays a timeline chart of speaker activity
+- **Semantic Search**: Retrieves relevant segments using FAISS and OpenAI embeddings
+- **Video Editing**: Adds text overlays and allows merging extracted video clips
 
 ## 🚀 Features
 - **Upload & Process Video Files** (`.mp4`, `.avi`, `.mov`, `.mkv`)
 - **Automatic Transcription** using OpenAI Whisper
 - **Speaker Recognition & Diarization** via Hugging Face Pyannote
 - **Speaker Segmentation** by mapping speech segments to speakers
-- **Interactive UI** with session persistence to avoid reprocessing on button clicks
-- **Speaker Timeline Visualization** using Matplotlib
+- **Semantic Search** using FAISS vector database and OpenAI embeddings
+- **Clip Extraction** from search results
+- **Video Editing** with text overlays
+- **Concatenate Extracted Clips** into a final video
 
 ## 📥 Installation
 Clone the repository and install the dependencies:
@@ -48,6 +51,7 @@ streamlit run app.py
 ```
 
 ## 📌 Usage
+### **Video Page**
 1. **Upload a video file** via the sidebar
 2. **Extract video & audio information**
 3. **Transcribe speech** with Whisper AI
@@ -55,19 +59,32 @@ streamlit run app.py
 5. **View speaker segmentation** with combined text data
 6. **Analyze speaker timeline** using a visual chart
 
+### **Semantic Search Page**
+1. **Enter a search term** to find relevant video segments
+2. **View top 10 matching segments**
+3. **Extract and display clips from the video**
+4. **Download individual extracted clips**
+5. **Combine all extracted clips into a single video**
+
+### **Video Editing Page**
+1. **Select a video clip**
+2. **Enter text for overlay**
+3. **Adjust position, font size, and color**
+4. **Apply the overlay and download the edited video**
+
 ## 📊 Technologies Used
 - **Streamlit** - For UI development
 - **Whisper AI** - For speech-to-text transcription
 - **Pyannote** - For speaker diarization
-- **MoviePy** - For video processing
-- **Matplotlib** - For speaker timeline visualization
+- **MoviePy** - For video processing and editing
+- **FAISS** - For semantic search indexing
+- **OpenAI Embeddings** - For efficient text retrieval
 
 ## 📝 TODO List
-1. **Add VectorDB** to enable semantic search on transcriptions and speaker data.
-2. **Break the video into smaller clips** for easier analysis and processing.
-3. **Create a highlight video** that summarizes key moments in the uploaded video.
-4. **Tone and person face features** that allows to add context.
-
+1. **Add More Video Editing Features** (e.g., trimming, filters, overlays)
+2. **Improve Semantic Search** with additional NLP techniques
+3. **Enhance UI/UX** for better user interaction
+4. **Integrate Cloud Storage** for saving processed clips
 
 ## 🤝 Contributing
 1. Fork the repo
